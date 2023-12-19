@@ -19,6 +19,4 @@
 int status2;
 void uart_communication_fsm();
 
-
-
 #endif /* INC_UART_COM_H_ */

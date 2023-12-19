@@ -24,6 +24,7 @@ void command_parser_fsm()
 			if(buffer[index_buffer] == '!')
 			{
 				status1 = RECEIVING_STATE;
+				// reset command data to use it again
 				reset_command_data();
 			}
 			break;
@@ -37,6 +38,7 @@ void command_parser_fsm()
 			if(buffer[index_buffer] == '#')
 			{
 				status1 = IDLE_STATE;
+				// add null terminate for extracting command
 				command_data[command_index] = '\0';
 				command_flag = 1;
 			} else
